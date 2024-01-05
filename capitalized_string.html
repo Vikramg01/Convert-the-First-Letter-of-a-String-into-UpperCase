@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            background: rgb(102, 102, 102);
+            
+        }
+        .main{
+            height: 200px;
+            width: 350px;
+            background-color: black(37, 37, 37);
+            color: #ecf0f3;
+            text-align: center;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            box-shadow: 14px 14px 20px rgb(109, 108, 108), -14px -14px 20px black(101, 100, 100);
+
+        }
+        p{
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <h1>
+            Enter value
+        </h1>
+
+        <input type="text" name="" id="text">
+
+        <button onclick="convert()">Capitalize</button>
+
+        <p id="result">Capitalized String :</p>
+    </div>
+
+
+
+    <script>
+        function convert() {
+            var text = document.getElementById("text").value;
+
+            var capitalized = text.charAt(0).toUpperCase() + text.slice(1);
+
+            document.getElementById("result").innerHTML = "Capitalized String : " + capitalized;
+
+
+        }
+    </script>
+</body>
+</html>
